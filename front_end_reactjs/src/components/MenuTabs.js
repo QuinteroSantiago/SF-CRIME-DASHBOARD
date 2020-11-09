@@ -46,6 +46,7 @@ function a11yProps(index) {
 const useStyles = makeStyles((theme) => ({
   root: {
     border: 1,
+    position: "fixed",
     textColor: 'white',
     textAlign: 'center',
     background: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(74,74,122,1) 47%, rgba(0,38,46,1) 100%)",
@@ -53,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   indicator: {
     top: 0,
     padding: (0, 0, 0, 2),
-    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)"
+    background: "white"
   },
   tabs: {
     textDecoration: 'none',
@@ -70,8 +71,7 @@ export default function ScrollableTabsButtonAuto() {
   };
 
   return (
-    <div>
-      <AppBar 
+      <AppBar
       className={classes.root} 
       position="static">
         <Tabs
@@ -94,8 +94,5 @@ export default function ScrollableTabsButtonAuto() {
           <Tab label="SF Crime Resolution" {...a11yProps(4)} />
         </Tabs>
       </AppBar>
-      <MenuTabs value={value} index={0}>
-        Item One
-      </MenuTabs></div>
   );
 }

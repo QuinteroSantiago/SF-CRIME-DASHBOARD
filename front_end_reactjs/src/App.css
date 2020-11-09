@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: "PT Sans", sans-serif;
-}
+}/* 
 
 .app::-webkit-scrollbar {
   display: none;
@@ -12,7 +12,7 @@
 .app {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
+} */
 
 .home,
 .all_records,

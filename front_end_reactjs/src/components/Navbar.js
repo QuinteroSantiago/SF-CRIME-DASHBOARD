@@ -43,10 +43,10 @@ function Navbar() {
                 </div>
                 {button && <Button buttonStyle='btn--outline'>All Records</Button>}
             </nav>
-            <Divider/><Divider/>
-            <Divider/><Divider/>
+            <Divider/>
             <div className = 'menu-tabs'>
-            <MenuTabs/></div>
+            <MenuTabs/>
+            </div>
         </>
     )
 }
