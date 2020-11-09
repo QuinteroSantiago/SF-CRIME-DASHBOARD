@@ -76,6 +76,13 @@
   display: none;
 }
 
+.menu-tabs {
+  justify-self: start;
+  margin-left: 0px;
+  text-decoration: none;
+  position: sticky;
+}
+
 @media screen and (max-width: 960px) {
   .NavbarItems {
     position: relative;
