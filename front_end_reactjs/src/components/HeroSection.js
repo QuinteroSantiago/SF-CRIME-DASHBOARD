@@ -13,7 +13,6 @@ textShadowColor: 'rgba(0, 0, 0, 0.75)',
     },
 })); */
 
-
 function HeroSection() {
 
     /* const classes = useStyles(); */
