@@ -9,9 +9,9 @@ function CardItem(props) {
         <Link className='cards__item__link' to={props.path}>
           <figure className='cards__item__pic-wrap' data-category={props.label}>
             <img
+              src='img-1.jpg'
               className='cards__item__img'
-              alt='Travel Image'
-              src={props.src}
+              alt='card'
             />
           </figure>
           <div className='cards__item__info'>
@@ -19,6 +19,7 @@ function CardItem(props) {
           </div>
         </Link>
       </li>
+
     </>
   );
 }

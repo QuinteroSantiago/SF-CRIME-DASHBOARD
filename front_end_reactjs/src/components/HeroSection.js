@@ -11,12 +11,9 @@ function HeroSection() {
             <h1>The Ultimate Guide to SF</h1>
             <p>What are you waiting for?</p>
             <div className="hero-btns">
-                <Button className="btns" buttonStyle='btn--outline' buttonSize='btn--large'>
-                    GET STARTED ... should redirect to SF Safety
+                <Button className="btns" buttonStyle='btn--primary' buttonSize='btn--large'>
+                    GET STARTED<i className='far-fa-play-circle'/>
                 </Button> 
-                <Button className="btns" buttonStyle='btn--primary' buttonSize='btn--large' onClick={console.log('hey')}>
-                    All Records <i className='far-fa-play-circle'/>
-                </Button>
             </div>
         </div>
     );
