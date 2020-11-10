@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+dir_to_ignore/node_modules
+dir_to_ignore/front_end_reactjs/node_modules
+dir_to_ignore/front_end_reactjs/.vs
+
