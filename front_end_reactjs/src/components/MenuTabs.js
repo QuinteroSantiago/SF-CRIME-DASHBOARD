@@ -45,7 +45,6 @@ function a11yProps(index) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    border: 1,
     position: "fixed",
     textColor: 'white',
     textAlign: 'center',

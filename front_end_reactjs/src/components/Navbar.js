@@ -4,7 +4,6 @@ import MenuTabs from './MenuTabs';
 import { Button } from './Button' ;
 import { Link } from 'react-router-dom' ;
 import './Navbar.css';
-import Divider from '@material-ui/core/Divider';
 
 function Navbar() {
     const [click, setClick] = useState(false);
@@ -32,9 +31,7 @@ function Navbar() {
                 <div className="navbar-container">
                     <Link to="/" className="navbar-logo">
                         SF Crime Dashboard<i class="fas fa-balance-scale"/>
-                    </Link>
-                    
-                    
+                    </Link>                    
                     <div className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                     </div>
@@ -42,8 +39,7 @@ function Navbar() {
                 <div className='nav-menu'>
                 </div>
                 {button && <Button buttonStyle='btn--outline'>All Records</Button>}
-            </nav>
-            <Divider/>
+            </nav>         
             <div className = 'menu-tabs'>
             <MenuTabs/>
             </div>
