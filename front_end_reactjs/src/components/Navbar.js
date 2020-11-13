@@ -1,14 +1,16 @@
+  
 import React, {useState, useEffect} from 'react' ;
+import MenuTabs from './MenuTabs';
 import { Button } from './Button' ;
 import { Link } from 'react-router-dom' ;
 import './Navbar.css';
+import Divider from '@material-ui/core/Divider';
 
 function Navbar() {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
 
     const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
 
     const showButton = () => {
         if(window.innerWidth <= 960) {
@@ -28,57 +30,23 @@ function Navbar() {
         <>
             <nav className="navbar">
                 <div className="navbar-container">
-                    <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                        SF Crime Dashboard <i class="fas fa-database"/>
+                    <Link to="/" className="navbar-logo">
+                        SF Crime Dashboard<i class="fas fa-balance-scale"/>
                     </Link>
+                    
+                    
                     <div className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                     </div>
                 </div>
-                <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                    <li className='nav-item'>
-                        <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                            Home
-                        </Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link to='/sf_safety' className='nav-links' onClick={closeMobileMenu}>
-                            SF Safety
-                        </Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link to='/neighborhood_safety' className='nav-links' onClick={closeMobileMenu}>
-                            Neighborhood Safety
-                        </Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link to='/police_effectiveness' className='nav-links' onClick={closeMobileMenu}>
-                            Police Effectiveness
-                        </Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link to='/crime_categorization' className='nav-links' onClick={closeMobileMenu}>
-                            Crime Categorization
-                        </Link>
-                    </li>                    
-                    <li className='nav-item'>
-                        <Link to='/crime_resolution' className='nav-links' onClick={closeMobileMenu}>
-                            Crime Resolution
-                        </Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link to='/sf_tourism' className='nav-links' onClick={closeMobileMenu}>
-                            SF Tourism
-                        </Link>
-                    </li>                    
-                    <li className='nav-item'>
-                        <Link to='/all_records' className='nav-links-mobile' onClick={closeMobileMenu}>
-                            All Records
-                        </Link>
-                    </li>
-                </ul>
+                <div className='nav-menu'>
+                </div>
                 {button && <Button buttonStyle='btn--outline'>All Records</Button>}
             </nav>
+            <Divider/>
+            <div className = 'menu-tabs'>
+            <MenuTabs/>
+            </div>
         </>
     )
 }
