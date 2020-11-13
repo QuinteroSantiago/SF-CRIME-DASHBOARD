@@ -1,21 +1,21 @@
 import React from 'react';
 import '../App.css'
 import {Button} from './Button';
-/* import { makeStyles } from '@material-ui/core/styles'; */
+import { makeStyles } from '@material-ui/core/styles';
 import './HeroSection.css';
 import sfbg from '../images/sfbg.png';
 
-/* const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({
     shadowing: {
 textShadowColor: 'rgba(0, 0, 0, 0.75)',
   textShadowOffset: {width: -1, height: 1},
   textShadowRadius: 10
     },
-})); */
+}));
 
 function HeroSection() {
 
-    /* const classes = useStyles(); */
+    const classes = useStyles();
     return (
         <div className='hero-container' styles={{ backgroundImage:`url(${sfbg})` }}>
             <h1>The San Francisco Crime Dashboard</h1>
