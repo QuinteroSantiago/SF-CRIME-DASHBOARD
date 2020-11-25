@@ -1,9 +1,14 @@
 import '../../App.css';
+import pagePadding from "./pages.css"
+import CrimeByDay from '../CrimeByDay';
+import CrimeTimesRanked from '../CrimeTimesRanked';
 
 function SFTourism() {
     return (
-        <>
-        </>
+        <div className="pagePadding">
+            <CrimeByDay />
+            <CrimeTimesRanked />
+        </div>
     );
 }
 
