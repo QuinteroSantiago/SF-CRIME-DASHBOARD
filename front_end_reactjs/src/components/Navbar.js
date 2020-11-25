@@ -4,7 +4,6 @@ import MenuTabs from './MenuTabs';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import Divider from '@material-ui/core/Divider';
 
 function Navbar() {
     const [click, setClick] = useState(false);
@@ -44,7 +43,6 @@ function Navbar() {
             <div className='menu-tabs'>
                 <MenuTabs />
             </div>
-            <Divider />
         </>
     )
 }
