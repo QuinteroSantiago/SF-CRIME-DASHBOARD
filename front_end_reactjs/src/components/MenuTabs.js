@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom' ;
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -14,7 +14,7 @@ function MenuTabs(props) {
 
   return (
     <div
-    // eslint-disable-next-line
+      // eslint-disable-next-line
       role="menutabs"
       hidden={value !== index}
       id={`scrollable-auto-tabpanel-${index}`}
@@ -71,28 +71,28 @@ export default function ScrollableTabsButtonAuto() {
   };
 
   return (
-      <AppBar
-      className={classes.root} 
+    <AppBar
+      className={classes.root}
       position="static">
-        <Tabs
+      <Tabs
         elevation={0}
-          classes={{
-            indicator: classes.indicator,
-            tabs: classes.tabs
-          }}
-          style={{height: "32px"}}
-          value={value}
-          onChange={handleChange}
-          variant="scrollable"
-          scrollButtons="auto"
-          aria-label="scrollable auto tabs example"
-        >
-          <Tab className={classes.tabs} label="Crime Categorization" {...a11yProps(0)} component={Link} to={"/CrimeCategorization"} />
-          <Tab label="SF Safety" {...a11yProps(1)} component={Link} to={"/"}/>
-          <Tab label="SF Tourism" {...a11yProps(2)} />
-          <Tab label="SF Law Enforcement" {...a11yProps(3)} />
-          <Tab label="SF Crime Resolution" {...a11yProps(4)} />
-        </Tabs>
-      </AppBar>
+        classes={{
+          indicator: classes.indicator,
+          tabs: classes.tabs
+        }}
+        style={{ height: "32px" }}
+        value={value}
+        onChange={handleChange}
+        variant="scrollable"
+        scrollButtons="auto"
+        aria-label="scrollable auto tabs example"
+      >
+        <Tab className={classes.tabs} label="Crime Categorization" {...a11yProps(0)} component={Link} to={"/CrimeCategorization"} />
+        <Tab className={classes.tabs} label="SF Safety" {...a11yProps(1)} component={Link} to={"/SFSafety"} />
+        <Tab className={classes.tabs} label="SF Tourism" {...a11yProps(2)} component={Link} to={"/SFTourism"} />
+        <Tab className={classes.tabs} label="SF Law Enforcement" {...a11yProps(3)} component={Link} to={"/SFLawEnforcement"} />
+        <Tab className={classes.tabs} label="SF Crime Resolution" {...a11yProps(4)} component={Link} to={"/SFCrimeResolution"} />
+      </Tabs>
+    </AppBar>
   );
 }
