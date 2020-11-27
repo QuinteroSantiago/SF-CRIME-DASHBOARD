@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
       maxWidth: 801,
     },
+    pagecontainer: {
+        paddingBottom: 20,
+    },
     media: {
         maxWidth: 792,
         height: 593,
@@ -110,7 +113,7 @@ export default function CrimeCategorization() {
     
     return (
         <Grid
-            className = "PageContainer"
+        className = {classes.pagecontainer}
             container
             spacing={0}
             direction="column"
