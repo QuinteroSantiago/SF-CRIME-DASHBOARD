@@ -1,15 +1,11 @@
 import React from 'react';
 import '../../App.css';
 import './Pages.css';
-import one from './1.png';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Chip from '@material-ui/core/Chip';
+import Divider from '@material-ui/core/Divider';
 import HomeIcon from '@material-ui/icons/Home';
 import { emphasize, makeStyles, withStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
@@ -42,11 +38,21 @@ const useStyles = makeStyles((theme) => ({
         maxHeight: 440,
       },
       card: {
-          paddingTop: 40,
-          paddingBottom: 40,
-          paddingLeft: 30,
+          paddingTop: 20,
+          paddingBottom: 20,
+          paddingLeft: 35,
           fontSize: 40,
-      }
+      },
+      text: {
+          paddingTop: 10,
+          paddingBottom: 40,
+          paddingLeft: 35,
+          paddingRight: 35,
+      },
+      subtitle: {
+        paddingTop: 37,
+        paddingBottom: 20,
+      },
   }));
 
   const StyledBreadcrumb = withStyles((theme) => ({
@@ -105,7 +111,6 @@ export default function CrimeCategorization() {
             direction="column"
             alignItems="center"
             justify="center"
-            style={{ minHeight: '100vh' }}
         >
             <Grid>
             <Breadcrumbs aria-label="breadcrumb" style={{ paddingBottom: 20 }} >
@@ -119,68 +124,63 @@ export default function CrimeCategorization() {
             <StyledBreadcrumb component="a" href="CrimeCategorization" label="Crime Categorization" onClick={handleClick} />
             </Breadcrumbs>
             </Grid>
-            
             <Grid>
-            <Card className = {classes.root}>
-            <CardHeader title="Crime Categorization" className = {classes.card} style={{ fontWeight: 'bold' }}/>
-            <CardMedia
-                className={classes.media}
-                image={one}
-                /*{<CrimeComparison />
-                <AverageCrimeTrend />*/
-            />
-            <CardContent>
-            <Typography paragraph variant="body2" color="textSecondary">
-                As seen above, this page displays the types of crimes shown as a trend over time. 
-                The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel above.
+            <Paper variant="outlined" className = {classes.root}>
+            <Grid container spacing={0}>
+                <Grid item xs={6}><h1 className={classes.card}>Crime Categorization</h1></Grid>
+                <Grid item xs={6} className = {classes.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Grid>
+            </Grid>
+                <Divider/>
+            <Typography paragraph variant="body2" color="textSecondary" className = {classes.text}>
+                As shown in the graph, this page displays the types of crimes shown as a trend over time. 
+                The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
             </Typography>
             <Paper className={classes.tablestyle}>
-      <TableContainer className={classes.tablecontainer}>
-        <Table stickyHeader aria-label="sticky table">
-          <TableHead>
-            <TableRow>
-              {columns.map((column) => (
-                <TableCell
-                  key={column.id}
-                  align={column.align}
-                  style={{ minWidth: column.minWidth }}
-                >
-                  {column.label}
-                </TableCell>
+            <TableContainer className={classes.tablecontainer}>
+                <Table stickyHeader aria-label="sticky table">
+                <TableHead>
+                <TableRow>
+                    {columns.map((column) => (
+                        <TableCell
+                        key={column.id}
+                        align={column.align}
+                        style={{ minWidth: column.minWidth }}
+                        >
+                        {column.label}
+                        </TableCell>
               ))}
             </TableRow>
           </TableHead>
-          <TableBody>
-            {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
-              return (
-                <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
-                  {columns.map((column) => {
-                    const value = row[column.id];
-                    return (
-                      <TableCell key={column.id} align={column.align}>
-                        {column.format && typeof value === 'number' ? column.format(value) : value}
-                      </TableCell>
-                    );
-                  })}
-                </TableRow>
-              );
-            })}
-          </TableBody>
-        </Table>
-      </TableContainer>
-      <TablePagination
-        rowsPerPageOptions={[10, 25, 100]}
-        component="div"
-        count={rows.length}
-        rowsPerPage={rowsPerPage}
-        page={page}
-        onChangePage={handleChangePage}
-        onChangeRowsPerPage={handleChangeRowsPerPage}
-      />
-    </Paper>
-    </CardContent>
-    </Card>
-    </Grid>
+                        <TableBody>
+                            {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
+                            return (
+                                <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
+                                {columns.map((column) => {
+                                    const value = row[column.id];
+                                    return (
+                                    <TableCell key={column.id} align={column.align}>
+                                        {column.format && typeof value === 'number' ? column.format(value) : value}
+                                    </TableCell>
+                                    );
+                                })}
+                                </TableRow>
+                            );
+                            })}
+                        </TableBody>
+                        </Table>
+                    </TableContainer>
+                    <TablePagination
+                        rowsPerPageOptions={[10, 25, 100]}
+                        component="div"
+                        count={rows.length}
+                        rowsPerPage={rowsPerPage}
+                        page={page}
+                        onChangePage={handleChangePage}
+                        onChangeRowsPerPage={handleChangeRowsPerPage}
+                    />
+                </Paper>
+            </Paper>
+        </Grid>
     </Grid>
     );
 }
