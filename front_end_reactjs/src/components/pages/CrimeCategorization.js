@@ -14,7 +14,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
-import TablePagination from '@material-ui/core/TablePagination';
+/* import TablePagination from '@material-ui/core/TablePagination'; */
 import TableRow from '@material-ui/core/TableRow';
 
 /* import CrimeComparison from '../CrimeComparison';
@@ -36,6 +36,10 @@ const useStyles = makeStyles((theme) => ({
       },
       tablecontainer: {
         maxHeight: 440,
+        paddingTop: 20,
+          paddingBottom: 20,
+          paddingLeft: 35,
+          paddingRight: 35,
       },
       card: {
           paddingTop: 20,
@@ -94,14 +98,14 @@ export default function CrimeCategorization() {
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
-    const handleChangePage = (event, newPage) => {
+    /* const handleChangePage = (event, newPage) => {
         setPage(newPage);
-    };
+    }; */
 
-    const handleChangeRowsPerPage = (event) => {
+   /*  const handleChangeRowsPerPage = (event) => {
         setRowsPerPage(+event.target.value);
         setPage(0);
-    };
+    }; */
     
     return (
         <Grid
@@ -130,7 +134,7 @@ export default function CrimeCategorization() {
                 <Grid item xs={6}><h1 className={classes.card}>Crime Categorization</h1></Grid>
                 <Grid item xs={6} className = {classes.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Grid>
             </Grid>
-                <Divider/>
+                <Divider className = {classes.divider}/>
             <Typography paragraph variant="body2" color="textSecondary" className = {classes.text}>
                 As shown in the graph, this page displays the types of crimes shown as a trend over time. 
                 The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
@@ -169,7 +173,7 @@ export default function CrimeCategorization() {
                         </TableBody>
                         </Table>
                     </TableContainer>
-                    <TablePagination
+                    {/* <TablePagination
                         rowsPerPageOptions={[10, 25, 100]}
                         component="div"
                         count={rows.length}
@@ -177,7 +181,7 @@ export default function CrimeCategorization() {
                         page={page}
                         onChangePage={handleChangePage}
                         onChangeRowsPerPage={handleChangeRowsPerPage}
-                    />
+                    /> */}
                 </Paper>
             </Paper>
         </Grid>
