@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../App.css';
-import './Pages.css';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Chip from '@material-ui/core/Chip';
 import Divider from '@material-ui/core/Divider';
@@ -16,13 +15,12 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 /* import TablePagination from '@material-ui/core/TablePagination'; */
 import TableRow from '@material-ui/core/TableRow';
-
-/* import CrimeComparison from '../CrimeComparison';
-import AverageCrimeTrend from '../AverageCrimeTrend'; */
+import CrimeComparison from '../CrimeComparison';
+/* import AverageCrimeTrend from '../AverageCrimeTrend'; */
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      maxWidth: 900,
+      maxWidth: 801,
     },
     media: {
         maxWidth: 792,
@@ -49,7 +47,6 @@ const useStyles = makeStyles((theme) => ({
       },
       text: {
           paddingTop: 10,
-          paddingBottom: 40,
           paddingLeft: 35,
           paddingRight: 35,
       },
@@ -57,6 +54,10 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: 37,
         paddingBottom: 20,
       },
+      breadcrumbs: {
+          paddingTop: 20,
+          paddingBottom: 20,
+      }
   }));
 
   const StyledBreadcrumb = withStyles((theme) => ({
@@ -117,7 +118,7 @@ export default function CrimeCategorization() {
             justify="center"
         >
             <Grid>
-            <Breadcrumbs aria-label="breadcrumb" style={{ paddingBottom: 20 }} >
+            <Breadcrumbs aria-label="breadcrumb" className = {classes.breadcrumbs} >
             <StyledBreadcrumb
                 component="a"
                 href="/"
@@ -132,13 +133,15 @@ export default function CrimeCategorization() {
             <Paper variant="outlined" className = {classes.root}>
             <Grid container spacing={0}>
                 <Grid item xs={6}><h1 className={classes.card}>Crime Categorization</h1></Grid>
-                <Grid item xs={6} className = {classes.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Grid>
+                {/* <Grid item xs={6} className = {classes.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Grid> */}
             </Grid>
                 <Divider className = {classes.divider}/>
             <Typography paragraph variant="body2" color="textSecondary" className = {classes.text}>
                 As shown in the graph, this page displays the types of crimes shown as a trend over time. 
                 The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
             </Typography>
+            <Grid container spacing={0}>
+                <Grid item xs={6}><CrimeComparison/></Grid></Grid>
             <Paper className={classes.tablestyle}>
             <TableContainer className={classes.tablecontainer}>
                 <Table stickyHeader aria-label="sticky table">
