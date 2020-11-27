@@ -1,6 +1,5 @@
 import '../../App.css';
 import AverageCrimeResolution from '../AverageCrimeResolution';
-import pagePadding from "./pages.css"
 
 function SFCrimeResolution() {
     return (

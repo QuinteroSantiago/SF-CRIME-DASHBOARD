@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { sign } from 'jsonwebtoken'
+//import { sign } from 'jsonwebtoken'
 
 class Metabase extends Component {
 	render() {

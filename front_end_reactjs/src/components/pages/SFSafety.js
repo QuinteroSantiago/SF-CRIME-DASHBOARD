@@ -1,13 +1,12 @@
 import '../../App.css';
-import pagePadding from "./pages.css"
-import DistrictRank from '../DistrictRank';
-import DistrictComparison from '../DistrictComparison';
+/* import DistrictRank from '../DistrictRank';
+import DistrictComparison from '../DistrictComparison'; */
 
 function SFSafety() {
     return (
         <div className="pagePadding">
-            <DistrictRank />
-            <DistrictComparison />
+            {/* <DistrictRank />
+            <DistrictComparison /> */}
         </div>
     );
 }
