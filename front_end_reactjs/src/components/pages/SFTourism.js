@@ -1,5 +1,4 @@
 import '../../App.css';
-import pagePadding from "./pages.css"
 import CrimeByDay from '../CrimeByDay';
 import CrimeTimesRanked from '../CrimeTimesRanked';
 
