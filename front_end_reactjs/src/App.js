@@ -9,23 +9,21 @@ import SFLawEnforcement from './components/pages/SFLawEnforcement';
 import SFSafety from './components/pages/SFSafety';
 import SFTourism from './components/pages/SFTourism';
 
-
 function App() {
   return (
     <div className="app">
-      <Header/>
-      <div className = "app-container">
-      <Router>
-        <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/CrimeCategorization' exact component={CrimeCategorization} />
-          <Route path='/SFCrimeResolution' exact component={SFCrimeResolution} />
-          <Route path='/SFLawEnforcement' exact component={SFLawEnforcement} />
-          <Route path='/SFSafety' exact component={SFSafety} />
-          <Route path='/SFCrimeResolution' exact component={SFCrimeResolution} />
-          <Route path='/SFTourism' exact component={SFTourism} />
-        </Switch>
-      </Router>
+      <Header />
+      <div className="app-container">
+        <Router>
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/CrimeCategorization' exact component={CrimeCategorization} />
+            <Route path='/SFCrimeResolution' exact component={SFCrimeResolution} />
+            <Route path='/SFLawEnforcement' exact component={SFLawEnforcement} />
+            <Route path='/SFSafety' exact component={SFSafety} />
+            <Route path='/SFTourism' exact component={SFTourism} />
+          </Switch>
+        </Router>
       </div>
     </div>
 

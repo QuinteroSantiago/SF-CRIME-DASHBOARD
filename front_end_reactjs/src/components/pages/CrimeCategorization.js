@@ -19,167 +19,170 @@ import CrimeComparison from '../CrimeComparison';
 /* import AverageCrimeTrend from '../AverageCrimeTrend'; */
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-      maxWidth: 801,
-    },
-    pagecontainer: {
-        paddingBottom: 20,
-    },
-    media: {
-        maxWidth: 792,
-        height: 593,
-    },
-      container: {
-        maxHeight: 440,
-      },
-      tablestyle: {
-        width: '100%',
-      },
-      tablecontainer: {
-        maxHeight: 440,
-        paddingTop: 20,
-          paddingBottom: 20,
-          paddingLeft: 35,
-          paddingRight: 35,
-      },
-      card: {
-          paddingTop: 20,
-          paddingBottom: 20,
-          paddingLeft: 35,
-          fontSize: 40,
-      },
-      text: {
-          paddingTop: 10,
-          paddingLeft: 35,
-          paddingRight: 35,
-      },
-      subtitle: {
-        paddingTop: 37,
-        paddingBottom: 20,
-      },
-      breadcrumbs: {
-          paddingTop: 20,
-          paddingBottom: 20,
-      }
-  }));
+  root: {
+    maxWidth: 801,
+  },
+  pagecontainer: {
+    paddingBottom: 20,
+  },
+  media: {
+    maxWidth: 792,
+    height: 593,
+  },
+  container: {
+    maxHeight: 440,
+  },
+  tablestyle: {
+    width: '100%',
+  },
+  tablecontainer: {
+    maxHeight: 440,
+    paddingTop: 20,
+    paddingBottom: 20,
+    paddingLeft: 35,
+    paddingRight: 35,
+  },
+  card: {
+    paddingTop: 20,
+    paddingBottom: 20,
+    paddingLeft: 35,
+    fontSize: 40,
+  },
+  text: {
+    paddingTop: 10,
+    paddingLeft: 35,
+    paddingRight: 35,
+  },
+  subtitle: {
+    paddingTop: 37,
+    paddingBottom: 20,
+  },
+  breadcrumbs: {
+    paddingTop: 20,
+    paddingBottom: 20,
+  }
+}));
 
-  const StyledBreadcrumb = withStyles((theme) => ({
-    root: {
-      backgroundColor: theme.palette.grey[100],
-      height: theme.spacing(3),
-      color: theme.palette.grey[800],
-      fontWeight: theme.typography.fontWeightRegular,
-      '&:hover, &:focus': {
-        backgroundColor: theme.palette.grey[300],
-      },
-      '&:active': {
-        boxShadow: theme.shadows[1],
-        backgroundColor: emphasize(theme.palette.grey[300], 0.12),
-      },
+const StyledBreadcrumb = withStyles((theme) => ({
+  root: {
+    backgroundColor: theme.palette.grey[100],
+    height: theme.spacing(3),
+    color: theme.palette.grey[800],
+    fontWeight: theme.typography.fontWeightRegular,
+    '&:hover, &:focus': {
+      backgroundColor: theme.palette.grey[300],
     },
-  }))(Chip);
+    '&:active': {
+      boxShadow: theme.shadows[1],
+      backgroundColor: emphasize(theme.palette.grey[300], 0.12),
+    },
+  },
+}))(Chip);
 
 const columns = [
-    { id: 'type', label: 'Type of Crime', minWidth: 170 },
-    { id: 'description', label: 'Description', minWidth: 100 },
-  ];
+  { id: 'type', label: 'Type of Crime', minWidth: 170 },
+  { id: 'description', label: 'Description', minWidth: 100 },
+];
 
-  function createData(type, description) {
-    return { type, description };
-  }
-  
-  const rows = [
-    createData('Burglary','Burglary, also called breaking and entering and sometimes housebreaking, is illegally entering a building or other areas to commit a crime. Usually that offence is theft, but most jurisdictions include others within the ambit of burglary.'),
-  ];
+function createData(type, description) {
+  return { type, description };
+}
 
-  function handleClick(event) {
-    event.preventDefault();
-  }
+const rows = [
+  createData('Arson', 'Any willful or malicious burning or attempt to burn, with or without intent to defraud, a dwelling house, public building, motor vehicle or aircraft, personal property of another, etc.'),
+  createData('Assault', 'An unlawful attack by one person upon another for the purpose of inflicting severe or aggravated bodily injury. This type of assault usually is accompanied by the use of a weapon or by means likely to produce death or great bodily harm.'),
+  createData('Bribery', 'refers to the offering, giving, soliciting, or receiving of any item of value as a means of influencing the actions of an individual holding a public or legal duty.'),
+  createData('Burglary', 'Burglary, also called breaking and entering and sometimes housebreaking, is illegally entering a building or other areas to commit a crime. Usually that offence is theft, but most jurisdictions include others within the ambit of burglary.'),
+];
+
+function handleClick(event) {
+  event.preventDefault();
+}
 
 export default function CrimeCategorization() {
 
-    const classes = useStyles();
-    const [page, setPage] = React.useState(0);
-    const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const classes = useStyles();
+  const [page, setPage] = React.useState(0);
+  const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
-    /* const handleChangePage = (event, newPage) => {
-        setPage(newPage);
-    }; */
+  /* const handleChangePage = (event, newPage) => {
+      setPage(newPage);
+  }; */
 
-   /*  const handleChangeRowsPerPage = (event) => {
-        setRowsPerPage(+event.target.value);
-        setPage(0);
-    }; */
-    
-    return (
-        <Grid
-        className = {classes.pagecontainer}
-            container
-            spacing={0}
-            direction="column"
-            alignItems="center"
-            justify="center"
-        >
-            <Grid>
-            <Breadcrumbs aria-label="breadcrumb" className = {classes.breadcrumbs} >
-            <StyledBreadcrumb
-                component="a"
-                href="/"
-                label="Home"
-                icon={<HomeIcon fontSize="small" />}
-                onClick={handleClick}
-            />
-            <StyledBreadcrumb component="a" href="CrimeCategorization" label="Crime Categorization" onClick={handleClick} />
-            </Breadcrumbs>
-            </Grid>
-            <Grid>
-            <Paper variant="outlined" className = {classes.root}>
-            <Grid container spacing={0}>
-                <Grid item xs={6}><h1 className={classes.card}>Crime Categorization</h1></Grid>
-                {/* <Grid item xs={6} className = {classes.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Grid> */}
-            </Grid>
-                <Divider className = {classes.divider}/>
-            <Typography paragraph variant="body2" color="textSecondary" className = {classes.text}>
-                As shown in the graph, this page displays the types of crimes shown as a trend over time. 
-                The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
+  /*  const handleChangeRowsPerPage = (event) => {
+       setRowsPerPage(+event.target.value);
+       setPage(0);
+   }; */
+
+  return (
+    <Grid
+      className={classes.pagecontainer}
+      container
+      spacing={0}
+      direction="column"
+      alignItems="center"
+      justify="center"
+    >
+      <Grid>
+        <Breadcrumbs aria-label="breadcrumb" className={classes.breadcrumbs} >
+          <StyledBreadcrumb
+            component="a"
+            href="/"
+            label="Home"
+            icon={<HomeIcon fontSize="small" />}
+            onClick={handleClick}
+          />
+          <StyledBreadcrumb component="a" href="CrimeCategorization" label="Crime Categorization" onClick={handleClick} />
+        </Breadcrumbs>
+      </Grid>
+      <Grid>
+        <Paper variant="outlined" className={classes.root}>
+          <Grid container spacing={0}>
+            <Grid item xs={6}><h1 className={classes.card}>Crime Categorization</h1></Grid>
+            {/* <Grid item xs={6} className = {classes.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Grid> */}
+          </Grid>
+          <Divider className={classes.divider} />
+          <Typography paragraph variant="body2" color="textSecondary" className={classes.text}>
+            As shown in the graph, this page displays the types of crimes shown as a trend over time.
+            The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
             </Typography>
-            <Grid container spacing={0}>
-                <Grid item xs={6}><CrimeComparison/></Grid></Grid>
-            <Paper className={classes.tablestyle}>
+          <Grid container spacing={0}>
+            <Grid item xs={6}><CrimeComparison /></Grid></Grid>
+          <Paper className={classes.tablestyle}>
             <TableContainer className={classes.tablecontainer}>
-                <Table stickyHeader aria-label="sticky table">
+              <Table stickyHeader aria-label="sticky table">
                 <TableHead>
-                <TableRow>
+                  <TableRow>
                     {columns.map((column) => (
-                        <TableCell
+                      <TableCell
                         key={column.id}
                         align={column.align}
                         style={{ minWidth: column.minWidth }}
-                        >
+                      >
                         {column.label}
-                        </TableCell>
-              ))}
-            </TableRow>
-          </TableHead>
-                        <TableBody>
-                            {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
-                            return (
-                                <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
-                                {columns.map((column) => {
-                                    const value = row[column.id];
-                                    return (
-                                    <TableCell key={column.id} align={column.align}>
-                                        {column.format && typeof value === 'number' ? column.format(value) : value}
-                                    </TableCell>
-                                    );
-                                })}
-                                </TableRow>
-                            );
-                            })}
-                        </TableBody>
-                        </Table>
-                    </TableContainer>
-                    {/* <TablePagination
+                      </TableCell>
+                    ))}
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
+                    return (
+                      <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
+                        {columns.map((column) => {
+                          const value = row[column.id];
+                          return (
+                            <TableCell key={column.id} align={column.align}>
+                              {column.format && typeof value === 'number' ? column.format(value) : value}
+                            </TableCell>
+                          );
+                        })}
+                      </TableRow>
+                    );
+                  })}
+                </TableBody>
+              </Table>
+            </TableContainer>
+            {/* <TablePagination
                         rowsPerPageOptions={[10, 25, 100]}
                         component="div"
                         count={rows.length}
@@ -188,9 +191,9 @@ export default function CrimeCategorization() {
                         onChangePage={handleChangePage}
                         onChangeRowsPerPage={handleChangeRowsPerPage}
                     /> */}
-                </Paper>
-            </Paper>
-        </Grid>
+          </Paper>
+        </Paper>
+      </Grid>
     </Grid>
-    );
+  );
 }
