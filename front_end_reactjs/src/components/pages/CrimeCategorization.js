@@ -17,8 +17,8 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 /* import TablePagination from '@material-ui/core/TablePagination'; */
 import TableRow from '@material-ui/core/TableRow';
-import CrimeComparison from '../CrimeComparison';
-import AverageCrimeTrend from '../AverageCrimeTrend';
+import CrimeComparison from '../graphs/CrimeComparison';
+import AverageCrimeTrend from '../graphs/AverageCrimeTrend';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -197,6 +197,10 @@ export default function CrimeCategorization() {
           <Grid container spacing={0}>
             <Grid item xs={6}><CrimeComparison /></Grid></Grid>
           <Paper className={classes.tablestyle}>
+            <Typography paragraph variant="body2" color="textSecondary" className={classes.text}>
+              As shown in the graph, this page displays the types of crimes shown as a trend over time.
+              The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
+            </Typography>
             <TableContainer className={classes.tablecontainer}>
               <Table stickyHeader aria-label="sticky table">
                 <TableHead>
@@ -232,6 +236,17 @@ export default function CrimeCategorization() {
             </TableContainer>
             <Grid container spacing={0}>
               <Grid item xs={6}><AverageCrimeTrend /></Grid></Grid>
+            <Typography paragraph variant="body2" color="textSecondary" className={classes.text}>
+              As shown in the graph, this page displays the types of crimes shown as a trend over time.
+              The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
+              The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
+              The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
+              The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
+              The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
+              The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
+              The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
+            </Typography>
+
             {/* <TablePagination
                         rowsPerPageOptions={[10, 25, 100]}
                         component="div"

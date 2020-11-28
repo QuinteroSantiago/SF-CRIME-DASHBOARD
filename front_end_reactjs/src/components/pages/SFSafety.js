@@ -10,8 +10,8 @@ import { emphasize, makeStyles, withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
-import DistrictRank from '../DistrictRank';
-import DistrictComparison from '../DistrictComparison';
+import DistrictRank from '../graphs/DistrictRank';
+import DistrictComparison from '../graphs/DistrictComparison';
 
 const useStyles = makeStyles((theme) => ({
   root: {

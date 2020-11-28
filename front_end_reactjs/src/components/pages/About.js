@@ -64,7 +64,7 @@ function handleClick(event) {
     event.preventDefault();
 }
 
-export default function AllRecords() {
+export default function About() {
 
     const classes = useStyles();
 
@@ -86,12 +86,12 @@ export default function AllRecords() {
                         icon={<HomeIcon fontSize="small" />}
                         onClick={handleClick}
                     />
-                    <StyledBreadcrumb component="a" href="/SFCrimeResolution" label="SF Crime Resolution" onClick={handleClick} />
+                    <StyledBreadcrumb component="a" href="/About" label="About" onClick={handleClick} />
                 </Breadcrumbs>
             </Grid>
             <Grid>
                 <Paper variant="outlined" className={classes.root}>
-                    <h1 className={classes.card}>SF Crime Resolution</h1>
+                    <h1 className={classes.card}>About</h1>
                     <Divider className={classes.divider} />
                     <Typography paragraph variant="body2" color="textSecondary" className={classes.text}>
                         As shown in the graph, this page displays the resolution status of crimes ordered by quantity of resolution.
