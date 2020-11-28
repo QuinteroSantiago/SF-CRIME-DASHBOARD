@@ -9,7 +9,7 @@ export default function Navigation() {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="lg">
-        <Header/>
+        <Header />
       </Container>
     </React.Fragment>
   );
