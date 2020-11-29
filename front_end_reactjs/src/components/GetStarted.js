@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css'
 import { Button } from './Button';
 import { makeStyles } from '@material-ui/core/styles';
-import './HeroSection.css';
+import './GetStarted.css';
 import sfbg from '../images/sfbg.png';
 
 const useStyles = makeStyles((theme) => ({

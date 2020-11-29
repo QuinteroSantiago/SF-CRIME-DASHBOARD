@@ -1,7 +1,7 @@
 //Need to Rename this page. 'CRIME OVER TIME' OR SOMETHING SIMILAR
 
 import React from 'react';
-import '../../App.css';
+import '../App.css';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Chip from '@material-ui/core/Chip';
 import Divider from '@material-ui/core/Divider';

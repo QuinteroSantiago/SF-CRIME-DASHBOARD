@@ -2,13 +2,12 @@ import React from 'react';
 import Header from './components/Header';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
-import Home from './components/pages/Home';
-import About from './components/pages/About';
-import CrimeCategorization from './components/pages/CrimeCategorization';
-import SFCrimeResolution from './components/pages/SFCrimeResolution';
-import SFLawEnforcement from './components/pages/SFLawEnforcement';
-import SFSafety from './components/pages/SFSafety';
-import SFTourism from './components/pages/SFTourism';
+import Home from './pages/Home';
+import About from './pages/About';
+import CrimeCategorization from './pages/CrimeCategorization';
+import SFCrimeResolution from './pages/SFCrimeResolution';
+import SFSafety from './pages/SFSafety';
+import SFTourism from './pages/SFTourism';
 
 function App() {
   return (
@@ -21,7 +20,6 @@ function App() {
             <Route path='/About' exact component={About} />
             <Route path='/CrimeCategorization' exact component={CrimeCategorization} />
             <Route path='/SFCrimeResolution' exact component={SFCrimeResolution} />
-            <Route path='/SFLawEnforcement' exact component={SFLawEnforcement} />
             <Route path='/SFSafety' exact component={SFSafety} />
             <Route path='/SFTourism' exact component={SFTourism} />
           </Switch>

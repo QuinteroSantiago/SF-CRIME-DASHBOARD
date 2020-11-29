@@ -1,8 +1,5 @@
-//I think we should rename this page. 'Best time to visit SF' OR SOMETHING SIMILAR
-
-
 import React from 'react';
-import '../../App.css';
+import '../App.css';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Chip from '@material-ui/core/Chip';
 import Divider from '@material-ui/core/Divider';
@@ -11,8 +8,7 @@ import { emphasize, makeStyles, withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
-import CrimeByDay from '../graphs/CrimeByDay';
-import CrimeTimesRanked from '../graphs/CrimeTimesRanked';
+import AverageCrimeResolution from '../graphs/AverageCrimeResolution';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -69,7 +65,7 @@ function handleClick(event) {
   event.preventDefault();
 }
 
-export default function SFTourism() {
+export default function SFCrimeResolution() {
 
   const classes = useStyles();
 
@@ -91,28 +87,19 @@ export default function SFTourism() {
             icon={<HomeIcon fontSize="small" />}
             onClick={handleClick}
           />
-          <StyledBreadcrumb component="a" href="/SFTourism" label="SF Tourism" onClick={handleClick} />
+          <StyledBreadcrumb component="a" href="/SFCrimeResolution" label="SF Crime Resolution" onClick={handleClick} />
         </Breadcrumbs>
       </Grid>
       <Grid>
         <Paper variant="outlined" className={classes.root}>
-          <h1 className={classes.card}>SF Tourism</h1>
+          <h1 className={classes.card}>SF Crime Resolution</h1>
           <Divider className={classes.divider} />
-          <Typography paragraph variant="body2" color="textSecondary" className={classes.text}>
-            This page displays trends of crime by times and days of the week. It provides valuable insight for tourists looking for days to visit and times to explore San Francisco.
-            </Typography>
-          <Grid container spacing={0}>
-            <Grid item xs={6}><CrimeByDay /></Grid></Grid>
           <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
-            This graph displays crime occurrences in San Francisco, ordered by the days of the week.
+            As shown in the graph below, this page displays the resolution status of crimes ordered by quantity of resolution.
             The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
             </Typography>
           <Grid container spacing={0}>
-            <Grid item xs={6}><CrimeTimesRanked /></Grid></Grid>
-          <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
-            This graph displays crime occurrences in San Francisco, ordered by the days of the week.
-            The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
-            </Typography>
+            <Grid item xs={6}><AverageCrimeResolution /></Grid></Grid>
         </Paper>
       </Grid>
     </Grid>
