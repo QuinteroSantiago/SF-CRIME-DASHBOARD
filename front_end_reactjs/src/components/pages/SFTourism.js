@@ -99,13 +99,20 @@ export default function SFTourism() {
           <h1 className={classes.card}>SF Tourism</h1>
           <Divider className={classes.divider} />
           <Typography paragraph variant="body2" color="textSecondary" className={classes.text}>
-            As shown in the graph, this page displays crime occurrences in San Francisco, ordered by the days of the week.
-            The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
+            This page displays trends of crime by times and days of the week. It provides valuable insight for tourists looking for days to visit and times to explore San Francisco.
             </Typography>
           <Grid container spacing={0}>
             <Grid item xs={6}><CrimeByDay /></Grid></Grid>
+          <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
+            This graph displays crime occurrences in San Francisco, ordered by the days of the week.
+            The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
+            </Typography>
           <Grid container spacing={0}>
             <Grid item xs={6}><CrimeTimesRanked /></Grid></Grid>
+          <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
+            This graph displays crime occurrences in San Francisco, ordered by the days of the week.
+            The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
+            </Typography>
         </Paper>
       </Grid>
     </Grid>

@@ -95,11 +95,19 @@ export default function About() {
                 <Paper variant="outlined" className={classes.root}>
                     <h1 className={classes.card}>About</h1>
                     <Divider className={classes.divider} />
-                    <Typography paragraph variant="body2" color="textSecondary" className={classes.text}>
-                        As shown in the graph, this page displays the resolution status of crimes ordered by quantity of resolution.
-                        The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
-            </Typography>
+                    <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
+                        San Francisco is considered the cultural, commercial, and financial center of Nothern California. It is the 16th most
+                        populous city in the US and the second most densely populated large U.S. city. It is also home to an area called Silicon
+                        Valley, the world's center for innovative technology companies with a GDP of $548 billion as of 2018. However, compared
+                        to the rest of the US, it is not a safe city, considering it is
+                        <a href="https://www.neighborhoodscout.com/ca/san-francisco/crime#:~:text=For%20San%20Francisco%2C%20we%20found,assault%20with%20a%20deadly%20weapon."> more dangerous than 98% of U.S. Cities. </a>
+                        This website's goal is to provide a guide to San Francisco tourists and future residents an overview crime in the city
+                        and the help visualize its changes through the years.
+                    </Typography>
                     <CrimeMap />
+                    <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
+                        This Crime Map above shows the most recent 1000 crimes in the San Francisco area.
+                    </Typography>
                 </Paper>
             </Grid>
         </Grid>

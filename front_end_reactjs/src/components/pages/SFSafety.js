@@ -98,14 +98,19 @@ export default function SFSafety() {
           <h1 className={classes.card}>SF Crime Safety</h1>
           <Divider className={classes.divider} />
           <Typography paragraph variant="body2" color="textSecondary" className={classes.text}>
-            As shown in the graph, this page displays the the districts in San Franscisco ranked by crime.
-            The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
+            This page shows trends of crimes in different districts of San Francisco over the years. It displays two graphs that show the most dangerous districts and an interactive graph that lets you choose the district you want to see.
             </Typography>
           <Grid container spacing={0}>
             <Grid item xs={6}><DistrictRank /></Grid></Grid>
+          <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
+            The graph above shows the 5 districts with the highest average monthly number of crimes.
+          </Typography>
+          <Grid container spacing={0}>
+            <Grid item xs={6}><DistrictComparison /></Grid></Grid>
+          <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
+            The graph above lets the user choose three different districts and compare their daily average reported crimes.
+            </Typography>
         </Paper>
-        <Grid container spacing={0}>
-          <Grid item xs={6}><DistrictComparison /></Grid></Grid>
       </Grid>
     </Grid>
   );

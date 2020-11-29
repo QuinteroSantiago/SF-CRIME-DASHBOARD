@@ -191,15 +191,21 @@ export default function CrimeCategorization() {
           </Grid>
           <Divider className={classes.divider} />
           <Typography paragraph variant="body2" color="textSecondary" className={classes.text}>
-            As shown in the graph, this page displays the types of crimes shown as a trend over time.
-            The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
+            This page shows trends in San Francisco's crime rate in certain areas over time. It displays two graphs that show the monthly crime rate and different crime categories trends over time.
             </Typography>
           <Grid container spacing={0}>
-            <Grid item xs={6}><CrimeComparison /></Grid></Grid>
+            <Grid item xs={6}><AverageCrimeTrend /></Grid></Grid>
           <Paper className={classes.tablestyle}>
-            <Typography paragraph variant="body2" color="textSecondary" className={classes.text}>
-              As shown in the graph, this page displays the types of crimes shown as a trend over time.
+            <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
+              The graph above displays average monthly crime rate over time.
+              The graph can be altered to include specific crimes, specific weekdays, specific districts, as well as a specific time period.
+            </Typography>
+            <Grid container spacing={0}>
+              <Grid item xs={6}><CrimeComparison /></Grid></Grid>
+            <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
+              The graph above displays the types of crimes shown as a trend over time.
               The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
+              The table below gives descriptions for each type of crime in the database.
             </Typography>
             <TableContainer className={classes.tablecontainer}>
               <Table stickyHeader aria-label="sticky table">
@@ -234,19 +240,6 @@ export default function CrimeCategorization() {
                 </TableBody>
               </Table>
             </TableContainer>
-            <Grid container spacing={0}>
-              <Grid item xs={6}><AverageCrimeTrend /></Grid></Grid>
-            <Typography paragraph variant="body2" color="textSecondary" className={classes.text}>
-              As shown in the graph, this page displays the types of crimes shown as a trend over time.
-              The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
-              The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
-              The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
-              The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
-              The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
-              The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
-              The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
-            </Typography>
-
             {/* <TablePagination
                         rowsPerPageOptions={[10, 25, 100]}
                         component="div"

@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       backgroundColor: '#F64C72',
       color: '#FFF'
-  }
+    }
   },
 }));
 
@@ -45,72 +45,72 @@ export default function Header() {
   return (
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
-      <Link
-            style={{ textDecoration: 'none' }}
-              href={'/'}>
-        <img src={Logo} className="navbar-logo" alt ="nlogo"/>
-      </Link>
+        <Link
+          style={{ textDecoration: 'none' }}
+          href={'/'}>
+          <img src={Logo} className="navbar-logo" alt="nlogo" />
+        </Link>
       </Toolbar>
       <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary} position="fixed">
-        
+
         <Link
-            style={{ textDecoration: 'none' }}
-              href={'CrimeCategorization'}
-              color="inherit"
-              noWrap
-              variant="body2"
-              className={classes.toolbarLink}
-        >     
+          style={{ textDecoration: 'none' }}
+          href={'CrimeCategorization'}
+          color="inherit"
+          noWrap
+          variant="body2"
+          className={classes.toolbarLink}
+        >
           <Button variant="contained" className={classes.links}>
             Crime Categorization
             </Button>
         </Link>
         <Link
-            style={{ textDecoration: 'none' }}
-              href={'SFSafety'}
-              color="inherit"
-              noWrap
-              variant="body2"
-              className={classes.toolbarLink}
-        >     
+          style={{ textDecoration: 'none' }}
+          href={'SFSafety'}
+          color="inherit"
+          noWrap
+          variant="body2"
+          className={classes.toolbarLink}
+        >
           <Button variant="contained" className={classes.links}>
             SF Crime Safety
             </Button>
         </Link>
         <Link
-            style={{ textDecoration: 'none' }}
-              href={'SFCrimeResolution'}
-              color="inherit"
-              noWrap
-              variant="body2"
-              className={classes.toolbarLink}
-        >     
+          style={{ textDecoration: 'none' }}
+          href={'SFCrimeResolution'}
+          color="inherit"
+          noWrap
+          variant="body2"
+          className={classes.toolbarLink}
+        >
           <Button variant="contained" className={classes.links}>
             SF Crime Resolution
           </Button>
         </Link>
         <Link
-            style={{ textDecoration: 'none' }}
-              href={'SFTourism'}
-              color="inherit"
-              noWrap
-              variant="body2"
-              className={classes.toolbarLink}
-        >     
+          style={{ textDecoration: 'none' }}
+          href={'SFTourism'}
+          color="inherit"
+          noWrap
+          variant="body2"
+          className={classes.toolbarLink}
+        >
           <Button variant="contained" className={classes.links}>
             SF Tourism
             </Button>
         </Link>
         <Link
-            style={{ textDecoration: 'none' }}
-              href={'SFLawEnforcement'}
-              color="inherit"
-              noWrap
-              variant="body2"
-              className={classes.toolbarLink}
-        >     
+          style={{ textDecoration: 'none' }}
+          href={'About'}
+          color="inherit"
+          noWrap
+          variant="body2"
+          className={classes.toolbarLink}
+        >
           <Button variant="contained" className={classes.links}>
-            SF Law Enforcement
+            About
             </Button>
         </Link>
       </Toolbar>

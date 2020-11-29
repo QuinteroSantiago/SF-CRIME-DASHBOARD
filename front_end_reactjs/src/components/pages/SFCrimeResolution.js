@@ -94,8 +94,8 @@ export default function SFCrimeResolution() {
         <Paper variant="outlined" className={classes.root}>
           <h1 className={classes.card}>SF Crime Resolution</h1>
           <Divider className={classes.divider} />
-          <Typography paragraph variant="body2" color="textSecondary" className={classes.text}>
-            As shown in the graph, this page displays the resolution status of crimes ordered by quantity of resolution.
+          <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
+            As shown in the graph below, this page displays the resolution status of crimes ordered by quantity of resolution.
             The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
             </Typography>
           <Grid container spacing={0}>
