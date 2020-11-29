@@ -8,10 +8,12 @@ import { emphasize, makeStyles, withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
+import CrimeMap from '../graphs/CrimeMap';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        maxWidth: 801,
+        maxWidth: 1001,
     },
     pagecontainer: {
         paddingBottom: 20,
@@ -97,6 +99,7 @@ export default function About() {
                         As shown in the graph, this page displays the resolution status of crimes ordered by quantity of resolution.
                         The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
             </Typography>
+                    <CrimeMap />
                 </Paper>
             </Grid>
         </Grid>

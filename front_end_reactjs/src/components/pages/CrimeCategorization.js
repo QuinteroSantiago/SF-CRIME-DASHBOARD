@@ -230,7 +230,7 @@ export default function CrimeCategorization() {
                         })}
                       </TableRow>
                     );
-                  })}
+                  })}``
                 </TableBody>
               </Table>
             </TableContainer>
