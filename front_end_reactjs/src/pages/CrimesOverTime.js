@@ -15,14 +15,14 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
-/* import TablePagination from '@material-ui/core/TablePagination'; */
+import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import CrimeComparison from '../graphs/CrimeComparison';
 import AverageCrimeTrend from '../graphs/AverageCrimeTrend';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 801,
+    maxWidth: 1202,
   },
   pagecontainer: {
     paddingBottom: 20,
@@ -147,20 +147,20 @@ function handleClick(event) {
   event.preventDefault();
 }
 
-export default function CrimeCategorization() {
+export default function CrimesOverTime() {
 
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
-  /* const handleChangePage = (event, newPage) => {
-      setPage(newPage);
-  }; */
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+  };
 
-  /*  const handleChangeRowsPerPage = (event) => {
-       setRowsPerPage(+event.target.value);
-       setPage(0);
-   }; */
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(+event.target.value);
+    setPage(0);
+  };
 
   return (
     <Grid
@@ -180,13 +180,13 @@ export default function CrimeCategorization() {
             icon={<HomeIcon fontSize="small" />}
             onClick={handleClick}
           />
-          <StyledBreadcrumb component="a" href="CrimeCategorization" label="Crime Categorization" onClick={handleClick} />
+          <StyledBreadcrumb component="a" href="CrimesOverTime" label="Crimes Over Time" onClick={handleClick} />
         </Breadcrumbs>
       </Grid>
       <Grid>
         <Paper variant="outlined" className={classes.root}>
           <Grid container spacing={0}>
-            <Grid item xs={6}><h1 className={classes.card}>Crime Categorization</h1></Grid>
+            <Grid item xs={6}><h1 className={classes.card}>Crimes Over Time</h1></Grid>
             {/* <Grid item xs={6} className = {classes.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Grid> */}
           </Grid>
           <Divider className={classes.divider} />
@@ -240,15 +240,15 @@ export default function CrimeCategorization() {
                 </TableBody>
               </Table>
             </TableContainer>
-            {/* <TablePagination
-                        rowsPerPageOptions={[10, 25, 100]}
-                        component="div"
-                        count={rows.length}
-                        rowsPerPage={rowsPerPage}
-                        page={page}
-                        onChangePage={handleChangePage}
-                        onChangeRowsPerPage={handleChangeRowsPerPage}
-                    /> */}
+            <TablePagination
+              rowsPerPageOptions={[10, 25, 100]}
+              component="div"
+              count={rows.length}
+              rowsPerPage={rowsPerPage}
+              page={page}
+              onChangePage={handleChangePage}
+              onChangeRowsPerPage={handleChangeRowsPerPage}
+            />
           </Paper>
         </Paper>
       </Grid>

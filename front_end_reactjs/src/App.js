@@ -4,10 +4,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
-import CrimeCategorization from './pages/CrimeCategorization';
-import SFCrimeResolution from './pages/SFCrimeResolution';
-import SFSafety from './pages/SFSafety';
-import SFTourism from './pages/SFTourism';
+import CrimesOverTime from './pages/CrimesOverTime';
+import CrimeResolution from './pages/CrimeResolution';
+import CrimeByArea from './pages/CrimeByArea';
+import SafestTimes from './pages/SafestTimes';
 
 function App() {
   return (
@@ -18,10 +18,10 @@ function App() {
           <Switch>
             <Route path='/' exact component={Home} />
             <Route path='/About' exact component={About} />
-            <Route path='/CrimeCategorization' exact component={CrimeCategorization} />
-            <Route path='/SFCrimeResolution' exact component={SFCrimeResolution} />
-            <Route path='/SFSafety' exact component={SFSafety} />
-            <Route path='/SFTourism' exact component={SFTourism} />
+            <Route path='/CrimesOverTime' exact component={CrimesOverTime} />
+            <Route path='/CrimeResolution' exact component={CrimeResolution} />
+            <Route path='/CrimeByArea' exact component={CrimeByArea} />
+            <Route path='/SafestTimes' exact component={SafestTimes} />
           </Switch>
         </Router>
       </div>

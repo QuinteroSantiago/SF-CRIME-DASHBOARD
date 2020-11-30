@@ -55,50 +55,50 @@ export default function Header() {
 
         <Link
           style={{ textDecoration: 'none' }}
-          href={'CrimeCategorization'}
+          href={'CrimesOverTime'}
           color="inherit"
           noWrap
           variant="body2"
           className={classes.toolbarLink}
         >
           <Button variant="contained" className={classes.links}>
-            Crime Categorization
+            Crimes Over Time
             </Button>
         </Link>
         <Link
           style={{ textDecoration: 'none' }}
-          href={'SFSafety'}
+          href={'CrimeByArea'}
           color="inherit"
           noWrap
           variant="body2"
           className={classes.toolbarLink}
         >
           <Button variant="contained" className={classes.links}>
-            SF Crime Safety
+            Crime By Area
             </Button>
         </Link>
         <Link
           style={{ textDecoration: 'none' }}
-          href={'SFCrimeResolution'}
+          href={'CrimeResolution'}
           color="inherit"
           noWrap
           variant="body2"
           className={classes.toolbarLink}
         >
           <Button variant="contained" className={classes.links}>
-            SF Crime Resolution
+            Crime Resolution
           </Button>
         </Link>
         <Link
           style={{ textDecoration: 'none' }}
-          href={'SFTourism'}
+          href={'SafestTimes'}
           color="inherit"
           noWrap
           variant="body2"
           className={classes.toolbarLink}
         >
           <Button variant="contained" className={classes.links}>
-            SF Tourism
+            Safest Times
             </Button>
         </Link>
         <Link

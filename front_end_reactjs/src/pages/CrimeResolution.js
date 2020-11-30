@@ -12,7 +12,7 @@ import AverageCrimeResolution from '../graphs/AverageCrimeResolution';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 801,
+    maxWidth: 1202,
   },
   pagecontainer: {
     paddingBottom: 20,
@@ -63,6 +63,7 @@ const StyledBreadcrumb = withStyles((theme) => ({
 
 function handleClick(event) {
   event.preventDefault();
+  console.info('You clicked a breadcrumb.');
 }
 
 export default function SFCrimeResolution() {
@@ -79,7 +80,7 @@ export default function SFCrimeResolution() {
       justify="center"
     >
       <Grid>
-        <Breadcrumbs aria-label="breadcrumb" className={classes.breadcrumbs} >
+        <Breadcrumbs aria-label="breadcrumb" className={classes.breadcrumbs}>
           <StyledBreadcrumb
             component="a"
             href="/"
@@ -87,12 +88,12 @@ export default function SFCrimeResolution() {
             icon={<HomeIcon fontSize="small" />}
             onClick={handleClick}
           />
-          <StyledBreadcrumb component="a" href="/SFCrimeResolution" label="SF Crime Resolution" onClick={handleClick} />
+          <StyledBreadcrumb component="a" href="/SFCrimeResolution" label="Crime Resolution" onClick={handleClick} />
         </Breadcrumbs>
       </Grid>
       <Grid>
         <Paper variant="outlined" className={classes.root}>
-          <h1 className={classes.card}>SF Crime Resolution</h1>
+          <h1 className={classes.card}>Crime Resolution</h1>
           <Divider className={classes.divider} />
           <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
             As shown in the graph below, this page displays the resolution status of crimes ordered by quantity of resolution.

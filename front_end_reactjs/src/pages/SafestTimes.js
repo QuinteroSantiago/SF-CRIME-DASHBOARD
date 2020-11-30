@@ -1,4 +1,4 @@
-//Need to Rename this page. 'CRIME By Area' OR SOMETHING SIMILAR
+//I think we should rename this page. 'Best time to visit SF' OR SOMETHING SIMILAR
 
 import React from 'react';
 import '../App.css';
@@ -10,12 +10,12 @@ import { emphasize, makeStyles, withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
-import DistrictRank from '../graphs/DistrictRank';
-import DistrictComparison from '../graphs/DistrictComparison';
+import CrimeByDay from '../graphs/CrimeByDay';
+import CrimeTimesRanked from '../graphs/CrimeTimesRanked';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 801,
+    maxWidth: 1202,
   },
   pagecontainer: {
     paddingBottom: 20,
@@ -68,7 +68,7 @@ function handleClick(event) {
   event.preventDefault();
 }
 
-export default function SFSafety() {
+export default function SafestTimes() {
 
   const classes = useStyles();
 
@@ -90,25 +90,27 @@ export default function SFSafety() {
             icon={<HomeIcon fontSize="small" />}
             onClick={handleClick}
           />
-          <StyledBreadcrumb component="a" href="/SFSafety" label="SF Crime Safety" onClick={handleClick} />
+          <StyledBreadcrumb component="a" href="/SafestTimes" label="Safest Times" onClick={handleClick} />
         </Breadcrumbs>
       </Grid>
       <Grid>
         <Paper variant="outlined" className={classes.root}>
-          <h1 className={classes.card}>SF Crime Safety</h1>
+          <h1 className={classes.card}>Safest Times</h1>
           <Divider className={classes.divider} />
           <Typography paragraph variant="body2" color="textSecondary" className={classes.text}>
-            This page shows trends of crimes in different districts of San Francisco over the years. It displays two graphs that show the most dangerous districts and an interactive graph that lets you choose the district you want to see.
+            This page displays trends of crime by times and days of the week. It provides valuable insight for tourists looking for days to visit and times to explore San Francisco.
             </Typography>
           <Grid container spacing={0}>
-            <Grid item xs={6}><DistrictRank /></Grid></Grid>
+            <Grid item xs={6}><CrimeByDay /></Grid></Grid>
           <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
-            The graph above shows the 5 districts with the highest average monthly number of crimes.
-          </Typography>
+            This graph displays crime occurrences in San Francisco, ordered by the days of the week.
+            The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
+            </Typography>
           <Grid container spacing={0}>
-            <Grid item xs={6}><DistrictComparison /></Grid></Grid>
+            <Grid item xs={6}><CrimeTimesRanked /></Grid></Grid>
           <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
-            The graph above lets the user choose three different districts and compare their daily average reported crimes.
+            This graph displays crime occurrences in San Francisco, ordered by the days of the week.
+            The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
             </Typography>
         </Paper>
       </Grid>

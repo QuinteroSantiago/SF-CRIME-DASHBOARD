@@ -17,7 +17,7 @@ class Metabase extends Component {
     var token = jwt.sign(payload, METABASE_SECRET_KEY);
 
     var iframeUrl = METABASE_SITE_URL + "/embed/question/" + token + "#bordered=true&titled=true";
-    return <iframe src={iframeUrl} title='Metabase' style={{ border: 'none', width: 1000, height: 600 }} />
+    return <iframe src={iframeUrl} title='Metabase' style={{ border: 'none', width: 1200, height: 800 }} />
   }
 }
 
