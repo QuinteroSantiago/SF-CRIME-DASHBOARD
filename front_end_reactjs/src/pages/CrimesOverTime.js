@@ -151,7 +151,7 @@ export default function CrimesOverTime() {
 
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -178,7 +178,6 @@ export default function CrimesOverTime() {
             href="/"
             label="Home"
             icon={<HomeIcon fontSize="small" />}
-            onClick={handleClick}
           />
           <StyledBreadcrumb component="a" href="CrimesOverTime" label="Crimes Over Time" onClick={handleClick} />
         </Breadcrumbs>

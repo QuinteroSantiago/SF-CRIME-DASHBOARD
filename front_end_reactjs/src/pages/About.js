@@ -9,7 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import CrimeMap from '../graphs/CrimeMap';
-
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -86,7 +86,6 @@ export default function About() {
                         href="/"
                         label="Home"
                         icon={<HomeIcon fontSize="small" />}
-                        onClick={handleClick}
                     />
                     <StyledBreadcrumb component="a" href="/About" label="About" onClick={handleClick} />
                 </Breadcrumbs>

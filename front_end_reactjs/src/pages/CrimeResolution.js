@@ -86,7 +86,6 @@ export default function SFCrimeResolution() {
             href="/"
             label="Home"
             icon={<HomeIcon fontSize="small" />}
-            onClick={handleClick}
           />
           <StyledBreadcrumb component="a" href="/SFCrimeResolution" label="Crime Resolution" onClick={handleClick} />
         </Breadcrumbs>

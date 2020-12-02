@@ -88,7 +88,6 @@ export default function CrimeByArea() {
             href="/"
             label="Home"
             icon={<HomeIcon fontSize="small" />}
-            onClick={handleClick}
           />
           <StyledBreadcrumb component="a" href="/CrimeByArea" label="Crime By Area" onClick={handleClick} />
         </Breadcrumbs>

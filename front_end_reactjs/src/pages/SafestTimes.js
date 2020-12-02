@@ -88,7 +88,6 @@ export default function SafestTimes() {
             href="/"
             label="Home"
             icon={<HomeIcon fontSize="small" />}
-            onClick={handleClick}
           />
           <StyledBreadcrumb component="a" href="/SafestTimes" label="Safest Times" onClick={handleClick} />
         </Breadcrumbs>
