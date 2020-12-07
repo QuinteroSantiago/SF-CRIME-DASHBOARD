@@ -96,7 +96,7 @@ export default function CrimeByArea() {
         <Paper variant="outlined" className={classes.root}>
           <h1 className={classes.card}>Crime By Area</h1>
           <Divider className={classes.divider} />
-          <Typography paragraph variant="body2" color="textSecondary" className={classes.text}>
+          <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
             This page shows trends of crimes in different districts of San Francisco over the years. It displays two graphs that show the most dangerous districts and an interactive graph that lets you choose the district you want to see.
             </Typography>
           <Grid container spacing={0}>

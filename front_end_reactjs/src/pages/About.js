@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import CrimeMap from '../graphs/CrimeMap';
+import TuppleCount from '../graphs/TuppleCount';
 import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles((theme) => ({
@@ -107,6 +108,9 @@ export default function About() {
                     <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
                         This Crime Map above shows the most recent 300 crimes in the San Francisco area.
                     </Typography>
+                    <Grid item xs={12} container justify="center">
+                        <TuppleCount />
+                    </Grid>
                 </Paper>
             </Grid>
         </Grid>

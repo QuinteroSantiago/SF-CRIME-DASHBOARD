@@ -96,7 +96,7 @@ export default function SafestTimes() {
         <Paper variant="outlined" className={classes.root}>
           <h1 className={classes.card}>Safest Times</h1>
           <Divider className={classes.divider} />
-          <Typography paragraph variant="body2" color="textSecondary" className={classes.text}>
+          <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
             This page displays trends of crime by times and days of the week. It provides valuable insight for tourists looking for days to visit and times to explore San Francisco.
             </Typography>
           <Grid container spacing={0}>

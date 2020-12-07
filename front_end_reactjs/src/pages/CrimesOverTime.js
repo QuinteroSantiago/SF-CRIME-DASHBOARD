@@ -189,7 +189,7 @@ export default function CrimesOverTime() {
             {/* <Grid item xs={6} className = {classes.subtitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Grid> */}
           </Grid>
           <Divider className={classes.divider} />
-          <Typography paragraph variant="body2" color="textSecondary" className={classes.text}>
+          <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
             This page shows trends in San Francisco's crime rate in certain areas over time. It displays two graphs that show the monthly crime rate and different crime categories trends over time.
             </Typography>
           <Grid container spacing={0}>
