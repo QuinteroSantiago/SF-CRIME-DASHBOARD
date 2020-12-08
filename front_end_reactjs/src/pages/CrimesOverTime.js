@@ -190,7 +190,7 @@ export default function CrimesOverTime() {
           </Grid>
           <Divider className={classes.divider} />
           <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
-            This page shows trends in San Francisco's crime rate in certain areas over time. It displays two graphs that show the monthly crime rate and different crime categories trends over time.
+            This page shows trends of how crime has changed in different districts of San Francisco over time. It displays two graphs that show the most dangerous districts and an interactive graph that lets you see crime trends in specific districts.
             </Typography>
           <Grid container spacing={0}>
             <Grid item xs={6}><AverageCrimeTrend /></Grid></Grid>

@@ -108,7 +108,7 @@ export default function SafestTimes() {
           <Grid container spacing={0}>
             <Grid item xs={6}><CrimeTimesRanked /></Grid></Grid>
           <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
-            This graph displays crime occurrences in San Francisco, ordered by the days of the week.
+            This graph displays crime occurrences in San Francisco, ordered by the times of the day.
             The graph can be altered depending on the information a user wants to learn from it by adjusting the controls built into the graph panel.
             </Typography>
         </Paper>

@@ -10,7 +10,6 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import CrimeMap from '../graphs/CrimeMap';
 import TuppleCount from '../graphs/TuppleCount';
-import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -96,13 +95,13 @@ export default function About() {
                     <h1 className={classes.card}>About</h1>
                     <Divider className={classes.divider} />
                     <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
-                        San Francisco is considered the cultural, commercial, and financial center of Nothern California. It is the 16th most
+                        San Francisco is considered the cultural, commercial, and financial center of Northern California. It is the 16th most
                         populous city in the US and the second most densely populated large U.S. city. It is also home to an area called Silicon
                         Valley, the world's center for innovative technology companies with a GDP of $548 billion as of 2018. However, compared
                         to the rest of the US, it is not a safe city, considered
                         <a href="https://www.neighborhoodscout.com/ca/san-francisco/crime#:~:text=For%20San%20Francisco%2C%20we%20found,assault%20with%20a%20deadly%20weapon."> more dangerous than 98% of U.S. Cities. </a>
                         This website's goal is to provide a guide to San Francisco tourists and future residents an overview crime in the city
-                        and the help visualize its changes through the years.
+                        and help users visualize changes in crime trends through the years.
                     </Typography>
                     <CrimeMap />
                     <Typography paragraph variant="body1" color="textSecondary" className={classes.text}>
